@@ -16,7 +16,9 @@ var invTwo = new Invoice('luigi', 'work on the luigi website', 300);
 var invoices = [];
 invoices.push(invOne);
 invoices.push(invTwo);
-invOne.client = 'yoshi';
+invoices.forEach(function (inv) {
+    console.log(inv.client, inv.amount, inv.format());
+});
 invTwo.amount = 400;
 console.log(invOne, invTwo);
 console.log(invoices);
