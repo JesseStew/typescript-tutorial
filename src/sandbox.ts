@@ -1,9 +1,9 @@
-const character = 'mario';
+type StringOrNum = string | number
 
-console.log(character);
+const logDetails = (uid: string | number, item: string) => {
+  console.log(`${item} has a uid of ${uid}`)
+}
 
-const inputs = document.querySelectorAll('input');
-
-inputs.forEach(input => {
-  console.log(input);
-});
+const greet = (user: {name: string, uid: string | number}) => {
+  console.log(`${user.name} says hello`)
+}
